@@ -1,0 +1,7 @@
+ Delete from table_name 
+ where id in 
+ (
+ select id from table_name
+ group by id
+ having count(id) > 1
+  )
