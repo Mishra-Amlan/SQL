@@ -1,0 +1,30 @@
+Q.1  create the below table
+Employee Id	  Name	      Manager Employee Id
+1	          Lagertha	          NA
+2	            John	            1
+3	            Odin	            1
+4	            Floki	            3
+
+
+Table has list of employees , their employee ids and their manager's employee id. Populate the name of the manager infront of each employee.
+
+ans - 
+
+--------------------------------------------creating the table---------------------------------------------------------------------------------
+create table employee
+ (
+ emp_id int,
+ name varchar(10),
+ manager_id int
+ )
+ 
+---------------------------------------------inserting data------------------------------------------------------------------------------------
+ insert into employee
+ values(1,'Lagertha',0),(2,'John',1),(3,'Odin',1),(4,'Floki',3)
+ 
+---------------------------------------------final query---------------------------------------------------------------------------------------
+ select *,(select name from employee t2 where t2.emp_id = t1.manager_id)as manager_name from employee t1
+ 
+------------------------------------------------END---------------------------------------------------------------------------------------------
+ 
+ 
