@@ -1,4 +1,4 @@
-checking tables in database
+checking tables in MS SQL Server database
 
 1.
 SELECT table_name
